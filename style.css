@@ -1,0 +1,148 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #eaf6f6;
+  color: #1f3b4d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* Centraliza horizontal */
+}
+
+/* ===== HEADER ===== */
+.header {
+  width: 100%;
+  background: #1f7a8c;
+  color: white;
+  text-align: center;
+  padding: 28px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.titulo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* ===== NAV ===== */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #76c7c0;
+  padding: 14px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #0f2d40;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 80%;
+  max-width: 420px;            /* menor */
+  margin: 40px auto;
+  background: white;
+  padding: 25px;               /* menor */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  text-align: center;          /* centraliza textos */
+  animation: fadeIn 0.4s ease;
+}
+
+.container h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #1f7a8c;
+}
+
+/* ===== FORM ===== */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Inputs reduzidos */
+input {
+  width: 70%;                  /* MENOR largura */
+  padding: 8px;                /* MENOR altura */
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #9fbfc4;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #1f7a8c;
+  box-shadow: 0 0 4px rgba(31,122,140,0.4);
+  outline: none;
+}
+
+/* ===== BUTTON ===== */
+button {
+  width: 70%;                /* acompanha o tamanho do input */
+  padding: 10px;             /* menor */
+  margin-top: 20px;
+  background: #1f7a8c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #14515c;
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  padding: 15px;
+  background: #1f7a8c;
+  color: white;
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  input, button {
+    width: 85%;     /* mais confortável no celular */
+  }
+}
